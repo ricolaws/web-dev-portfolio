@@ -1,38 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,500;1,500&family=IM+Fell+Double+Pica&family=Iceberg&display=swap");
+/* fonts
+font-family: 'DM Mono', monospace;
+font-family: 'Iceberg', cursive;
+font-family: 'IM Fell Double Pica', serif; */
+:root {
+  /* colors */
+  --light-gray: #e5e5e5;
+  --med-gray: #c4c4c4;
+  --blue: #041fcb;
+  --light-green: #18d67b;
+  --dark-green: #019a6f;
+}
+
+/* Document level adjustments */
+html {
+  font-size: 17px;
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 13px;
+  }
+}
+
 .App {
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "DM Mono", monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
 }
