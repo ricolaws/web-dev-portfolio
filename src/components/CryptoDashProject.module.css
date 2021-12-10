@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  background: var(--light-gray);
+  justify-content: center;
+  min-height: 100vh;
+  border-top: 2px solid var(--blue);
+  padding-top: 2rem;
+}
+
+.item1 {
+  background: var(--med-gray);
+}

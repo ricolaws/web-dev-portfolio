@@ -9,7 +9,7 @@
   box-sizing: border-box;
   border-radius: 30px;
   width: 20rem;
-  height: 38rem;
+  min-height: 38rem;
 }
 
 .screen::before {
