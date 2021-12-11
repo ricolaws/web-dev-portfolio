@@ -1,0 +1,46 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  background: var(--med-gray);
+  border-top: 2px solid var(--blue);
+  line-height: 1.4rem;
+}
+
+.panel span {
+  font-size: small;
+}
+
+.panel p {
+  margin: 2rem;
+  align-self: flex-start;
+  margin: 2rem 2rem 0 2rem;
+}
+
+.panel footer {
+  text-align: right;
+  width: 80%;
+  align-self: flex-end;
+  padding-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.spinner {
+  -webkit-animation: rotation 12s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+.accent {
+  color: var(--blue);
+  font-size: 1.2rem;
+}

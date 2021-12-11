@@ -2,9 +2,10 @@ import React from "react";
 import GL_1 from "../media/GL_1.mp4";
 import GL_2 from "../media/GL_2.mp4";
 import wire_globe from "../media/wire_globe2.svg";
-import shape_3 from "../media/component3.svg";
+import comSat from "../media/com_sat.svg";
 import InfoPanel from "./InfoPanel";
 import classes from "./GlobalVideoProject.module.css";
+import ViewProject from "./ViewProject";
 
 function GlobalVideoProject(props) {
   const content = (
@@ -47,12 +48,12 @@ function GlobalVideoProject(props) {
       <div className={classes.item4}>
         <InfoPanel content={content} />
       </div>
-      <div className={classes.item5}>
-        <p>
-          CLICK ➔ ➔ ➔<br />[<span>view project</span>]
-        </p>
-        <img alt="" className={classes.shapes} src={shape_3} width="200" />
-      </div>
+      <ViewProject
+        demoLink={"demo"}
+        codeLink={"code"}
+        src={comSat}
+        width={props.width}
+      />
     </section>
   );
 }

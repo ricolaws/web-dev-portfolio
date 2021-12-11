@@ -25,7 +25,7 @@ function App() {
         content={introText}
       />
       <GlobalVideoProject width={width} />
-      <CryptoDashProject />
+      <CryptoDashProject width={width} />
       <ContactSection />
     </div>
   );
