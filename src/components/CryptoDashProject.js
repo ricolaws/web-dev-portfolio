@@ -12,11 +12,11 @@ function CryptoDashProject(props) {
     <section className="container-section">
       <div className="panel light-gray">
         <div className="panel-content">
-          <heading>
+          <header>
             <h2>CRYPTOCURRENCY</h2>
             <h3>PORTFOLIO</h3>
             <h3>DASHBOARD</h3>
-          </heading>
+          </header>
 
           <video autoPlay loop muted width={props.width - 40}>
             <source src={lineChart} type="video/mp4"></source>
