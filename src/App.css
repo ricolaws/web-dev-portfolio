@@ -11,12 +11,9 @@ font-family: 'IM Fell Double Pica', serif; */
   --light-green: #18d67b;
   --dark-green: #019a6f;
 }
-/* html {
-  width: 100vw;
-} */
-/* Document level adjustments */
+
 html {
-  font-size: 17px;
+  font-size: 18px;
 }
 @media (max-width: 900px) {
   html {
@@ -49,6 +46,40 @@ a {
   text-decoration: inherit;
 }
 
+.section-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: DM Mono;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4rem;
+  letter-spacing: 0.15em;
+  width: 100%;
+  border-top: 2px solid var(--blue);
+}
+
+.panel-content {
+  padding: 1rem 2rem;
+}
+
+.panel img {
+  margin-block: 1rem;
+}
+
 .fade-in-section {
   opacity: 0;
   visibility: hidden;
@@ -74,22 +105,12 @@ a {
   color: black;
 }
 
-.panel {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  text-align: center;
-  font-family: DM Mono;
-  font-size: 0.9rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.4rem;
-  letter-spacing: 0.15em;
-  border-top: 2px solid var(--blue);
-  /* width: 100%; */
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
 }
 
 button {
@@ -118,6 +139,7 @@ button {
 button:hover {
   background: var(--blue);
   color: white;
+  cursor: pointer;
   border: 2px solid white;
 }
 
@@ -130,6 +152,34 @@ button:active {
   transform: scale(0.98);
 }
 
-.nav-item > .active {
-  border-bottom: 2px solid white;
+/*  non-mobile-layout */
+@media (min-width: 600px) {
+  .panel-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 65%;
+  }
+  video {
+    max-width: 100%;
+  }
+  img {
+    max-width: 90%;
+  }
+}
+
+/*  large-screen-layout */
+@media (min-width: 1200px) {
+  .panel-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 40%;
+  }
+  video {
+    max-width: 100%;
+  }
+  img {
+    max-width: 90%;
+  }
 }

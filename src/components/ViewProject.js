@@ -6,14 +6,18 @@ function ViewProject({ demoLink, codeLink, src, width }) {
     <section className={classes.background}>
       <div className={classes.container}>
         <p className={classes.accent}>
-          CLICK ➔ ➔ ➔<br />[<span>view project</span>]
+          <a href={demoLink}>
+            CLICK ➔ ➔ ➔<br />[<span>view project</span>]
+          </a>
         </p>
 
         <div>
           <img className={classes.spinner} alt="" src={src} width={width / 4} />
         </div>
         <footer className={classes.accent}>
-          [<span>view code</span>]
+          <a href={codeLink}>
+            [<span>view code</span>]
+          </a>
         </footer>
       </div>
     </section>

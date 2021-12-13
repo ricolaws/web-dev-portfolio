@@ -2,9 +2,52 @@ import React, { useState } from "react";
 import classes from "./NavMenu.module.css";
 import { Link } from "react-scroll";
 
-function NavMenu({ onFormSwitch }) {
+function NavMenu({ onFormSwitch, width }) {
   const [isActive, setIsActive] = useState(false);
 
+  if (width > 700) {
+    return (
+      <div className={`${classes.nav} ${classes.desktop}`}>
+        <div
+          className={`${classes.icon} ${classes.desktop}`}
+          onClick={() => setIsActive(!isActive)}
+        >
+          <div>+</div>
+        </div>
+        <nav className={`${classes.content} ${classes.desktop}`}>
+          <ul>
+            <li className={`${classes.item}`}>
+              <Link
+                activeClass={`${classes.active}`}
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={400}
+              >
+                Home
+              </Link>
+            </li>
+            <li className={`${classes.item}`}>
+              <Link
+                activeClass={`${classes.active}`}
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={400}
+              >
+                Projects
+              </Link>
+            </li>
+            <li onClick={onFormSwitch} className={`${classes.item}`}>
+              Contact
+            </li>
+          </ul>
+        </nav>
+      </div>
+    );
+  }
   return (
     <React.Fragment>
       {isActive ? (
@@ -17,9 +60,9 @@ function NavMenu({ onFormSwitch }) {
           </div>
           <nav className={`${classes.content} ${classes.open}`}>
             <ul>
-              <li className="nav-item">
+              <li className={`${classes.item}`}>
                 <Link
-                  activeClass="active"
+                  activeClass={`${classes.active}`}
                   to="home"
                   spy={true}
                   smooth={true}
@@ -29,9 +72,9 @@ function NavMenu({ onFormSwitch }) {
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className={`${classes.item}`}>
                 <Link
-                  activeClass="active"
+                  activeClass={`${classes.active}`}
                   to="projects"
                   spy={true}
                   smooth={true}
@@ -41,14 +84,14 @@ function NavMenu({ onFormSwitch }) {
                   Projects
                 </Link>
               </li>
-              <li onClick={onFormSwitch} className="nav-item">
+              <li onClick={onFormSwitch} className={`${classes.item}`}>
                 Contact
               </li>
             </ul>
           </nav>
         </div>
       ) : (
-        <div className={classes.nav}>
+        <div className={`${classes.nav}`}>
           <div className={classes.icon} onClick={() => setIsActive(!isActive)}>
             <div>+</div>
           </div>

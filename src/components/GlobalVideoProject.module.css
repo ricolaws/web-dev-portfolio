@@ -1,20 +1,10 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  width: 100%;
-  background: var(--med-gray);
-  justify-content: center;
-  min-height: 100vh;
-}
-
 header h2 {
-  padding-top: 0.4rem;
+  padding-block: 2rem;
   font-size: 2rem;
   font-family: "DM Mono", monospace;
   font-style: italic;
   color: white;
-  letter-spacing: 0rem;
+  letter-spacing: 0.2rem;
 }
 
 footer {
@@ -30,4 +20,8 @@ footer {
 .floatR {
   float: right;
   margin: 0 1rem 0 0.5rem;
+}
+
+.blue {
+  color: var(--blue);
 }

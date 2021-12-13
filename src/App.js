@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <FormspreeProvider project="1830745082580434482">
-        <NavMenu onFormSwitch={handleShowForm} />
+        <NavMenu onFormSwitch={handleShowForm} width={width} />
         <Hero id="home" width={width} />
         <FadeInSection>
           <GlobalVideoProject id="projects" name="projects" width={width} />

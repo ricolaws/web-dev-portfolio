@@ -4,18 +4,18 @@ import wire_globe from "../media/wire_globe2.svg";
 import comSat from "../media/new_com_sat.svg";
 import classes from "./GlobalVideoProject.module.css";
 import ViewProject from "./ViewProject";
-import FadeInSection from "./FadeInSection";
 
 function GlobalVideoProject(props) {
+  const videoWidth = props.width * 0.8;
   return (
-    <section className={classes.container} id={props.id}>
-      <FadeInSection>
-        <section className="panel med-gray">
+    <section className="section-container" id={props.id}>
+      <section className="panel med-gray">
+        <div className="panel-content">
           <header>
             <h2>GLOBAL VIDEO PLAYER</h2>
           </header>
           <main className={classes.video}>
-            <video autoPlay loop muted width={props.width * 0.8}>
+            <video autoPlay loop muted width={videoWidth}>
               <source src={GL_1} type="video/mp4"></source>
             </video>
           </main>
@@ -26,12 +26,13 @@ function GlobalVideoProject(props) {
               <span className={classes.youtubeAPI}>YouTube API</span>
             </p>
           </footer>
-        </section>
-      </FadeInSection>
-      <FadeInSection>
-        <section className="panel light-gray">
+        </div>
+      </section>
+
+      <section className="panel light-gray">
+        <div className="panel-content">
           <main>
-            <p>
+            <p className={classes.blue}>
               Lorem Lorem ipsum dolor,
               <img
                 alt="wireframe globe"
@@ -52,12 +53,11 @@ function GlobalVideoProject(props) {
             </p>
             <p>Other text explaining things here</p>
           </main>
-        </section>
-      </FadeInSection>
-
+        </div>
+      </section>
       <ViewProject
-        demoLink={"demo"}
-        codeLink={"code"}
+        demoLink={"https://obscure-global.web.app/"}
+        codeLink={"https://github.com/ricolaws/global-video-player"}
         src={comSat}
         width={props.width}
       />

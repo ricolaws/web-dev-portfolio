@@ -1,29 +1,12 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  background: var(--light-gray);
-  height: 30rem;
-  gap: 2rem;
-  /* justify-content: center;
-  align-items: center; */
-  padding: 2rem 1rem 2rem 1rem;
-  color: var(--blue);
-  text-align: center;
-  font-family: DM Mono;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.4rem;
-  letter-spacing: 0.15em;
-  border-top: 2px solid var(--blue);
-  color: black;
-}
-
 .link {
   color: var(--blue);
+  cursor: pointer;
 }
 
 .contact {
   margin-bottom: 2rem;
+}
+
+main {
+  color: black;
 }
