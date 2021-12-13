@@ -1,18 +1,37 @@
 import React from "react";
 import classes from "./ContactSection.module.css";
+import orb from "../media/warped_shape.svg";
 
-function ContactSection() {
+function ContactSection({ onFormSwitch }) {
+  const contactHandler = () => {
+    onFormSwitch();
+  };
+
   return (
-    <section className={classes.container}>
-      <div>tools</div>
+    <section className="panel light-gray">
+      <main>
+        <p>
+          Thanks for the visit! If you would like to know more about me you can
+          look over my{" "}
+          <a className={classes.link} href="https://github.com/ricolaws">
+            {" "}
+            Resume.
+          </a>{" "}
+        </p>
+        <p>
+          More of my work can be seen on my
+          <a className={classes.link} href="https://github.com/ricolaws">
+            {" "}
+            Github.
+          </a>
+          and if you have questions please feel free to reach out.
+        </p>
+      </main>
       <div>
-        More of my work can be seen on my{" "}
-        <a href="https://github.com/ricolaws">Github.</a>
-        Thanks for the visit and if you have questions please feel free to reach
-        out.
-      </div>
-      <div>
-        <button>CONTACT</button>
+        <img alt="" className={classes.orb} src={orb} width="180" />
+        <button className={classes.contact} onClick={contactHandler}>
+          Contact
+        </button>
       </div>
     </section>
   );

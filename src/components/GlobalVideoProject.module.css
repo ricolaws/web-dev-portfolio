@@ -6,15 +6,9 @@
   background: var(--med-gray);
   justify-content: center;
   min-height: 100vh;
-  border-top: 2px solid var(--blue);
-  padding-top: 2rem;
 }
 
-.item1 {
-  text-align: center;
-  width: 100%;
-}
-.item1 h2 {
+header h2 {
   padding-top: 0.4rem;
   font-size: 2rem;
   font-family: "DM Mono", monospace;
@@ -23,21 +17,9 @@
   letter-spacing: 0rem;
 }
 
-.item2 {
-  margin: auto;
-}
-
-/* video {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-} */
-
-.item3 p {
-  margin: 0 3.8rem 1rem 3.8rem;
-  /* width: 75%; */
+footer {
+  text-align: left;
+  padding-left: 1rem;
 }
 
 .youtubeAPI {
@@ -45,29 +27,7 @@
   font-size: 1.2rem;
 }
 
-.item4 {
-  width: 100%;
-  height: auto;
-  overflow: auto;
-}
-
 .floatR {
   float: right;
   margin: 0 1rem 0 0.5rem;
-}
-
-.item5 {
-  border-top: 2px solid var(--blue);
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
-  color: var(--blue);
-}
-
-.item5 span {
-  font-size: small;
 }

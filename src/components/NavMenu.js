@@ -1,18 +1,9 @@
 import React, { useState } from "react";
 import classes from "./NavMenu.module.css";
+import { Link } from "react-scroll";
 
-function NavMenu() {
+function NavMenu({ onFormSwitch }) {
   const [isActive, setIsActive] = useState(false);
-
-  //   const content = `Home Projects Contact`;
-
-  const content = (
-    <ul>
-      <li>Home</li>
-      <li>Projects</li>
-      <li>Contact</li>
-    </ul>
-  );
 
   return (
     <React.Fragment>
@@ -24,14 +15,44 @@ function NavMenu() {
           >
             <div>+</div>
           </div>
-          <nav className={`${classes.content} ${classes.open}`}>{content}</nav>
+          <nav className={`${classes.content} ${classes.open}`}>
+            <ul>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={400}
+                >
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={400}
+                >
+                  Projects
+                </Link>
+              </li>
+              <li onClick={onFormSwitch} className="nav-item">
+                Contact
+              </li>
+            </ul>
+          </nav>
         </div>
       ) : (
         <div className={classes.nav}>
           <div className={classes.icon} onClick={() => setIsActive(!isActive)}>
             <div>+</div>
           </div>
-          <nav className={classes.content}>{content}</nav>
+          <nav className={classes.content}></nav>
         </div>
       )}
     </React.Fragment>

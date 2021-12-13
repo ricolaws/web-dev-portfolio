@@ -11,7 +11,9 @@ font-family: 'IM Fell Double Pica', serif; */
   --light-green: #18d67b;
   --dark-green: #019a6f;
 }
-
+/* html {
+  width: 100vw;
+} */
 /* Document level adjustments */
 html {
   font-size: 17px;
@@ -45,4 +47,89 @@ h4 {
 a {
   color: inherit;
   text-decoration: inherit;
+}
+
+.fade-in-section {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease-out, visibility 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.light-gray {
+  background: var(--light-gray);
+  color: var(--blue);
+}
+
+.light-gray h2 {
+  color: black;
+}
+
+.med-gray {
+  background: var(--med-gray);
+  color: black;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  font-family: DM Mono;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4rem;
+  letter-spacing: 0.15em;
+  border-top: 2px solid var(--blue);
+  /* width: 100%; */
+}
+
+button {
+  display: inline-block;
+  border: 2px solid var(--blue);
+  border-radius: 0;
+  padding: 1rem 1rem;
+  margin: 1rem;
+
+  text-decoration: none;
+  background: white;
+  width: 50%;
+  max-width: 10rem;
+  color: black;
+  font-family: "DM Mono", monospace;
+  font-size: 1rem;
+  line-height: 18px;
+  letter-spacing: 0.25em;
+  cursor: grab;
+  text-align: center;
+  transition: all 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover {
+  background: var(--blue);
+  color: white;
+  border: 2px solid white;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.nav-item > .active {
+  border-bottom: 2px solid white;
 }

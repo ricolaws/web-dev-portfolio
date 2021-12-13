@@ -1,0 +1,12 @@
+{
+  "forms": {
+    "contactMe": {
+      "name": "Contact Me",
+      "fields": {
+        "email": { "type": "email", "required": true },
+        "message": { "type": "text", "required": true }
+      },
+      "actions": [{ "type": "email", "to": "rhalaws1@gmail.com" }]
+    }
+  }
+}

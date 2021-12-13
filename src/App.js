@@ -1,32 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
+import { FormspreeProvider } from "@formspree/react";
 import "./App.css";
-import InfoPanel from "./components/InfoPanel";
 import Hero from "./components/Hero";
 import GlobalVideoProject from "./components/GlobalVideoProject";
 import CryptoDashProject from "./components/CryptoDashProject";
 import ContactSection from "./components/ContactSection";
+import ContactForm from "./components/ContactForm";
 import useWindowDimensions from "./hooks/getWindowDimensions";
 import NavMenu from "./components/NavMenu";
+import FadeInSection from "./components/FadeInSection";
 
 function App() {
+  const [showContactForm, setShowContactForm] = useState(false);
   const { height, width } = useWindowDimensions();
-  const introText =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.";
-  const introHeading = "Creative Web Design";
+
+  const handleShowForm = () => {
+    setShowContactForm(!showContactForm);
+  };
 
   return (
     <div className="App">
-      <NavMenu />
-      <Hero />
-      <InfoPanel
-        height={height}
-        width={width}
-        heading={introHeading}
-        content={introText}
-      />
-      <GlobalVideoProject width={width} />
-      <CryptoDashProject width={width} />
-      <ContactSection />
+      <FormspreeProvider project="1830745082580434482">
+        <NavMenu onFormSwitch={handleShowForm} />
+        <Hero id="home" width={width} />
+        <FadeInSection>
+          <GlobalVideoProject id="projects" name="projects" width={width} />
+        </FadeInSection>
+
+        <FadeInSection>
+          <CryptoDashProject width={width} />
+        </FadeInSection>
+        <ContactForm showForm={showContactForm} onFormSwitch={handleShowForm} />
+        <FadeInSection>
+          <ContactSection onFormSwitch={handleShowForm} />
+        </FadeInSection>
+      </FormspreeProvider>
     </div>
   );
 }

@@ -21,9 +21,9 @@
 
 .icon {
   position: fixed;
-  right: 24px;
+  right: 0;
   font-size: 4rem;
-  margin-right: 0;
+  margin-right: 2rem;
   transform: rotate(90deg);
   transition-property: all;
   transition-duration: 1s;

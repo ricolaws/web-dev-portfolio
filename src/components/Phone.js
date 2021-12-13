@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Phone.module.css";
+import TypeWriterEffect from "react-typewriter-effect";
 
 function Phone() {
   return (
@@ -7,7 +8,22 @@ function Phone() {
       <div className={classes.top}>
         <div className={classes.details}></div>
       </div>
-      <h1 className={classes.msg}>Hi, it's me, Richard.</h1>
+      <div className={classes.message}>
+        <TypeWriterEffect
+          startDelay={800}
+          cursorColor="black"
+          text="Hi,"
+          typeSpeed={80}
+          hideCursorAfterText={true}
+        />
+        <TypeWriterEffect
+          startDelay={1800}
+          cursorColor="black"
+          text="it's me, Richard."
+          typeSpeed={55}
+          hideCursorAfterText={true}
+        />
+      </div>
       <div className={classes.bottom}>
         <div className={classes.home}></div>
       </div>

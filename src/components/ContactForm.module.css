@@ -1,0 +1,77 @@
+.overlay {
+  width: 100vw;
+  height: 0px;
+  background-color: var(--blue);
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.6s cubic-bezier(0.58, 0.09, 0.39, 1.5);
+}
+
+.overlay.open {
+  height: 110vh;
+}
+
+.overlay.vanish {
+  height: 110vh;
+  transition: opacity 5.6s ease-in;
+  opacity: 0;
+}
+
+.vanish p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.container {
+  display: block;
+  box-sizing: border-box;
+  width: 20rem;
+  min-height: 28rem;
+  z-index: 2;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.field {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.nobtn:hover {
+  border: 2px solid #ff5656;
+}
+
+input {
+  height: 2rem;
+  font-size: 1.2rem;
+  outline: 0;
+}
+
+textarea {
+  height: 10rem;
+  font-size: 1.2rem;
+  outline: 0;
+}

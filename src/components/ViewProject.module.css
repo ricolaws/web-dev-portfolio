@@ -1,4 +1,4 @@
-.panel {
+.background {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -9,17 +9,27 @@
   line-height: 1.4rem;
 }
 
-.panel span {
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
+  max-width: 400px;
+}
+
+.container span {
   font-size: small;
 }
 
-.panel p {
+.container p {
   margin: 2rem;
   align-self: flex-start;
   margin: 2rem 2rem 0 2rem;
 }
 
-.panel footer {
+.container footer {
   text-align: right;
   width: 80%;
   align-self: flex-end;
@@ -29,6 +39,7 @@
 
 .spinner {
   -webkit-animation: rotation 12s infinite linear;
+  max-width: 100px;
 }
 
 @keyframes rotation {
