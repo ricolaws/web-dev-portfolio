@@ -1,25 +1,26 @@
 import React from "react";
 import Phone from "./Phone";
+import WindowDisplay from "./WindowDisplay";
 import classes from "./Hero.module.css";
 
-function Hero(props) {
+function Hero({ id, width }) {
   return (
-    <section className="section-container hero" id={props.id}>
-      <Phone />
+    <section className="section-container hero" id={id}>
+      {width < 700 ? <Phone /> : <WindowDisplay />}
+
       <section className="panel light-gray">
         <div className="panel-content">
           <header>
-            <h2 className={classes.heroSubHeading}>Web Design Stuff</h2>
+            <h2 className={classes.heroSubHeading}>Welcome to my portfolio.</h2>
           </header>
           <main className={classes.main}>
             <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam."
+              I’m a software developer with a background in music. Previously I
+              built audio software in the Max/MSP programming environment, these
+              days I like to make interactive experiences and creative
+              interfaces in JavaScript and React.
             </p>
-            <p>Other text explaining things here</p>
           </main>
-          <footer>footer</footer>
         </div>
       </section>
     </section>

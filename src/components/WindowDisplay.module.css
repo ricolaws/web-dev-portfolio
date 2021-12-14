@@ -1,0 +1,60 @@
+.window {
+  background: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-block: 9rem;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 30px;
+  width: 40rem;
+  min-height: 22rem;
+}
+
+.window::before {
+  content: " ";
+  position: absolute;
+  width: 40rem;
+  height: 22rem;
+  z-index: -1;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  background: var(--dark-green);
+  border: 2px solid black;
+  border-radius: 30px;
+}
+
+.window h1 {
+  padding-left: 2rem;
+  margin: auto;
+  font-size: 3.2rem;
+  line-height: 4rem;
+}
+
+.top {
+  padding-left: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--med-gray);
+  height: 2.4rem;
+  border-bottom: 2px solid black;
+  border-radius: 30px 30px 0 0;
+}
+
+.circle {
+  background: var(--light-green);
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.message {
+  width: 90%;
+  height: 15rem;
+}

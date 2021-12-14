@@ -12,7 +12,7 @@ function GlobalVideoProject(props) {
       <section className="panel med-gray">
         <div className="panel-content">
           <header>
-            <h2>GLOBAL VIDEO PLAYER</h2>
+            <h2 className={classes.title}>GLOBAL VIDEO PLAYER</h2>
           </header>
           <main className={classes.video}>
             <video autoPlay loop muted width={videoWidth}>
@@ -32,26 +32,37 @@ function GlobalVideoProject(props) {
       <section className="panel light-gray">
         <div className="panel-content">
           <main>
-            <p className={classes.blue}>
-              Lorem Lorem ipsum dolor,
+            <p className={`left`}>
+              720,000 hours of video are uploaded to YouTube every day. So why
+              am I getting the same recommendations all the time? I wanted to
+              make YouTube less predictable, so I eliminated all the usual ways
+              of searching for content and went with simply location, sorting
+              the results so that the most recent videos apprear first.
+            </p>
+            <p className={`${classes.blue} left`}>
               <img
                 alt="wireframe globe"
-                className={classes.floatR}
+                className={classes.floatL}
                 src={wire_globe}
                 width="60"
-              />{" "}
-              consectetur adipiscing elit, sed. Lorem Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit, sed. Blah blah blah. Lorem
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
-              Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed. Blah blah blah. Lorem Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed. Lorem Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed. Blah blah blah. Lorem Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed. Lorem
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed. Blah
-              blah blah.
+              />
+              A different result needs a different UI. I imagined choosing a
+              video by spinning a globe and putting a finger down. So I built a
+              3D model of the earth in THREE.JS. I implemented texture mapping
+              with topographic sattelite images to create differences in
+              elevation, and after some time I had a beautiful interactive
+              planet.
             </p>
-            <p>Other text explaining things here</p>
+            <p className="right">
+              The tricky part turned out to be converting a point on a globe
+              into coordinates you could use to with the API. Apparently folks
+              in the 3D rendering world use a process called raycasting which
+              casts virtual light rays from the virtual camera to its focal
+              point in the 3D scene. The point of ray-sphere intersection is
+              then converted from shperical coordinates into cartesian, and next
+              thing you know you are watching a YouTube video uploaded ten
+              minutes ago in Burundi.
+            </p>
           </main>
         </div>
       </section>

@@ -9,14 +9,14 @@
   box-sizing: border-box;
   border-radius: 30px;
   width: 20rem;
-  min-height: 38rem;
+  min-height: 36rem;
 }
 
 .screen::before {
   content: " ";
   position: absolute;
   width: 20rem;
-  height: 38rem;
+  height: 36rem;
   z-index: -1;
   top: 1rem;
   left: 1rem;
@@ -63,9 +63,9 @@
 }
 
 .details {
-  width: 0.12em;
-  height: 0.12em;
-  border-radius: 100%;
+  width: 0.24em;
+  height: 0.24em;
+  border-radius: 50%;
   position: relative;
   top: -0.3em;
   background: black;
@@ -73,17 +73,16 @@
 
 .details::before {
   content: "";
-  width: 0.8em;
-  height: 0.1em;
+  width: 1em;
+  height: 0.2em;
   border-radius: 0.25em;
   position: absolute;
-  top: 0.3em;
-  left: -0.35em;
+  top: 0.5em;
+  left: -0.4em;
   background: black;
 }
 
 .message {
   width: 80%;
   height: 20rem;
-  /* font-family: "IM Fell Double Pica", serif; */
 }

@@ -8,8 +8,15 @@
 }
 
 .heroSubHeading {
-  font-size: 2rem;
-  font-family: "" DM Mono "", monospace;
-  letter-spacing: 0.2rem;
+  font-family: "IM FELL Double Pica";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
   line-height: 1.8rem;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+
+.main {
+  padding-bottom: 2rem;
 }

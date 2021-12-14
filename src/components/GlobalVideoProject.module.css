@@ -1,10 +1,11 @@
-header h2 {
+.title {
   padding-block: 2rem;
   font-size: 2rem;
   font-family: "DM Mono", monospace;
   font-style: italic;
   color: white;
   letter-spacing: 0.2rem;
+  line-height: 1.8rem;
 }
 
 footer {
@@ -19,6 +20,11 @@ footer {
 
 .floatR {
   float: right;
+  margin: 0 1rem 0 0.5rem;
+}
+
+.floatL {
+  float: left;
   margin: 0 1rem 0 0.5rem;
 }
 

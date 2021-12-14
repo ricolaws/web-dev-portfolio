@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,500;1,500&family=IM+Fell+Double+Pica&family=Iceberg&display=swap");
 /* fonts
 font-family: 'DM Mono', monospace;
-font-family: 'Iceberg', cursive;
 font-family: 'IM Fell Double Pica', serif; */
+
 :root {
   /* colors */
   --light-gray: #e5e5e5;
@@ -73,7 +73,7 @@ a {
 }
 
 .panel-content {
-  padding: 1rem 2rem;
+  padding: 2rem;
 }
 
 .panel img {
