@@ -63,7 +63,7 @@ function CryptoDashProject(props) {
         </div>
       </div>
       <ViewProject
-        demoLink={"demo"}
+        demoLink={"https://eloquent-crypto-dashboard.netlify.app/"}
         codeLink={"https://github.com/ricolaws/crypto-dashboard"}
         src={spinner}
         width={props.width}
