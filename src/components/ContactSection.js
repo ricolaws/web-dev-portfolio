@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./ContactSection.module.css";
 import orb from "../media/warped_shape.svg";
+import resume from "../media/Richard_Laws_Resume.pdf";
 
 function ContactSection({ onFormSwitch }) {
   const contactHandler = () => {
@@ -21,10 +22,10 @@ function ContactSection({ onFormSwitch }) {
           </p>
           <p className="left">
             If you would like to know more about me you can look over my
-            <a className={classes.link} href="https://github.com/ricolaws">
+            <a className={classes.link} target="_blank" href={resume}>
               {" "}
               Resume.
-            </a>{" "}
+            </a>
           </p>
           <p className="right">
             If you have questions, please feel free to reach out.

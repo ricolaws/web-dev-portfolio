@@ -16,9 +16,9 @@ function App() {
 
   const handleShowForm = () => {
     setShowContactForm(!showContactForm);
+    console.log(width, height);
   };
 
-  console.log(width, height);
   return (
     <div className="App">
       <FormspreeProvider project="1830745082580434482">
