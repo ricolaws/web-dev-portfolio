@@ -16,6 +16,7 @@ function App() {
 
   const handleShowForm = () => {
     setShowContactForm(!showContactForm);
+    console.log(width, height);
   };
 
   return (
