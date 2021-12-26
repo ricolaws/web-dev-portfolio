@@ -18,7 +18,7 @@ function CryptoDashProject(props) {
             <h3>DASHBOARD</h3>
           </header>
 
-          <video autoPlay loop muted width={props.width - 40}>
+          <video autoPlay playsInline loop muted width={props.width - 40}>
             <source src={lineChart} type="video/mp4"></source>
           </video>
 
@@ -52,7 +52,7 @@ function CryptoDashProject(props) {
             <br />
             <span className={classes.accent2}> MARKET DATA.</span>
           </p>
-          <video autoPlay loop muted width={props.width - 40}>
+          <video autoPlay playsInline loop muted width={props.width - 40}>
             <source src={donutLoop} type="video/mp4"></source>
           </video>
           <p className="right">

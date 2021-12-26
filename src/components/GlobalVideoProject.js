@@ -15,7 +15,7 @@ function GlobalVideoProject(props) {
             <h2 className={classes.title}>GLOBAL VIDEO PLAYER</h2>
           </header>
           <main className={classes.video}>
-            <video autoPlay loop muted width={videoWidth}>
+            <video autoPlay playsInline loop muted width={videoWidth}>
               <source src={GL_1} type="video/mp4"></source>
             </video>
           </main>
