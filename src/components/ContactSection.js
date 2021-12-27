@@ -22,7 +22,12 @@ function ContactSection({ onFormSwitch }) {
           </p>
           <p className="left">
             If you would like to know more about me you can look over my
-            <a className={classes.link} target="_blank" href={resume}>
+            <a
+              className={classes.link}
+              target="_blank"
+              rel="noreferrer"
+              href={resume}
+            >
               {" "}
               Resume.
             </a>
