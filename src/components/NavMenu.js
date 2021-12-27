@@ -11,10 +11,10 @@ function NavMenu({ onFormSwitch, width }) {
     setVisible(true);
   }, 1200);
 
-  const handleScroll = () => {
+  const handleScroll = debounce(() => {
     setVisible(false);
     returnVisible();
-  };
+  }, 10);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
